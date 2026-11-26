@@ -13,9 +13,9 @@ LuCI pages for [adblock-lean](https://github.com/lynxthecat/adblock-lean) 0.8.x.
 Add the repository and its keys to the router, then install. The second key is a spare, so updates keep working if the signing key ever has to change:
 
 ```
-echo 'https://github.com/Wildside-UK/luci-app-adblock-lean/raw/refs/heads/main/apk/packages.adb' >> /etc/apk/repositories.d/customfeeds.list
-wget https://github.com/Wildside-UK/luci-app-adblock-lean/raw/refs/heads/main/apk/wildside-uk.pem -O /etc/apk/keys/wildside-uk.pem
-wget https://github.com/Wildside-UK/luci-app-adblock-lean/raw/refs/heads/main/apk/wildside-uk-backup.pem -O /etc/apk/keys/wildside-uk-backup.pem
+echo 'https://raw.githubusercontent.com/Wildside-UK/luci-app-adblock-lean/refs/heads/main/apk/packages.adb' >> /etc/apk/repositories.d/customfeeds.list
+wget https://raw.githubusercontent.com/Wildside-UK/luci-app-adblock-lean/refs/heads/main/apk/wildside-uk.pem -O /etc/apk/keys/wildside-uk.pem
+wget https://raw.githubusercontent.com/Wildside-UK/luci-app-adblock-lean/refs/heads/main/apk/wildside-uk-backup.pem -O /etc/apk/keys/wildside-uk-backup.pem
 apk update
 apk add luci-app-adblock-lean
 ```
@@ -25,7 +25,7 @@ Updates then come with `apk upgrade`.
 Or install the package on its own, without the repository:
 
 ```
-wget https://github.com/Wildside-UK/luci-app-adblock-lean/raw/refs/heads/main/apk/luci-app-adblock-lean-0.1.0-r1.apk -O /tmp/luci-app-adblock-lean.apk
+wget https://raw.githubusercontent.com/Wildside-UK/luci-app-adblock-lean/refs/heads/main/apk/luci-app-adblock-lean-0.1.0-r1.apk -O /tmp/luci-app-adblock-lean.apk
 apk add --allow-untrusted /tmp/luci-app-adblock-lean.apk
 ```
 
